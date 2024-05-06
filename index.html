@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Material-web form</title>
+    <style>label { display: block; margin: 10px; }</style>
+</head>
+<body>
+    <script type="module" src="./bundle.js"></script>
+
+    <h1>Material-Web form</h1>
+    
+    <p>Built with <a href="https://material-web.dev/about/quick-start/" target="_blank">https://material-web.dev/about/quick-start/</a></p>
+
+
+    <p>
+      Material-web make usage of shadow-DOM,<br>
+      see this demo that also fails at autofill form detection :
+      <a href="https://jimetevenard.github.io/Shadow-DOM-Demo/" target="_blank">https://jimetevenard.github.io/Shadow-DOM-Demo/</a>
+    </p>
+
+    <form action="#">
+    <label>
+      Username :
+      <md-outlined-text-field name="username"></md-outlined-text-field>
+    </label>
+
+    <label>
+     Password : 
+     <md-outlined-text-field name="password" type="password"></md-outlined-text-field>
+   
+     <p><a href="simple.html">Classic form (without material-web)</a></p>
+
+     <md-outlined-button>Please, let  me in !</md-outlined-button>
+     </form>
+</body>
+</html>
