@@ -3,38 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Material-web form</title>
-    <style>label { display: block; margin: 10px; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material-web login form</title>
+    <style>
+      .sub { font-style: italic; color: navy; font-size: 1.3em; }
+      .nota-bene { background: gold; padding: 10px; }
+      label { display: block; margin: 10px; }
+    </style>
 </head>
 <body>
     <script type="module" src="./bundle.js"></script>
 
-    <h1>Material-Web form</h1>
+    <h1>Material-Web login form</h1>
+
+    <p class="sub">
+      A test login page to check if Password autofill works well
+    </p>
     
-    <p>Built with <a href="https://material-web.dev/about/quick-start/" target="_blank">https://material-web.dev/about/quick-start/</a></p>
-
-
     <p>
-      Material-web make usage of shadow-DOM,<br>
-      see this demo that also fails at autofill form detection :
-      <a href="https://jimetevenard.github.io/Shadow-DOM-Demo/" target="_blank">https://jimetevenard.github.io/Shadow-DOM-Demo/</a>
+      This page is built by following <a href="https://material-web.dev/about/quick-start/" target="_blank">these steps : material-web.dev/about/quick-start</a>.
     </p>
 
+    <p>
+      The <a href="https://github.com/jimetevenard/Material-Web-Form">source code</a> is available (see <code>index.html</code>, <code>index.js</code> and the Github-CI workflow file that builds and publishes it here) 
+    </p>
+
+    <div class="nota-bene">
+      <p >
+        Material-web makes usage of <strong>Shadow-DOM</strong> around the fields.
+      </p>
+      <p>
+        This could be the root cause of some password autofillers, can't manage to detect them.<br>
+        A simpler demo of <code>&lt;input&gt;</code>s wrapped in a Shadow-DOM makes the autofill fail as well :
+        <a href="https://jimetevenard.github.io/Shadow-DOM-Demo/" target="_blank">https://jimetevenard.github.io/Shadow-DOM-Demo/</a>
+      </p>
+    </div>
+    
+
     <form action="#">
-    <label>
-      Username :
-      <md-outlined-text-field name="username"></md-outlined-text-field>
-    </label>
+      <label>
+        Username :
+        <md-outlined-text-field name="username"></md-outlined-text-field>
+      </label>
 
-    <label>
-     Password : 
-     <md-outlined-text-field name="password" type="password"></md-outlined-text-field>
-   
-     <p><a href="simple.html">Classic form (without material-web)</a></p>
+      <label>
+        Password : 
+        <md-outlined-text-field name="password" type="password"></md-outlined-text-field>
+      </label>
+      <md-outlined-button>Please, let  me in !</md-outlined-button>
+    </form>
 
-     <md-outlined-button>Please, let  me in !</md-outlined-button>
-     </form>
+     <p><a href="simple.html">Classic login form (without material-web)</a></p>
 </body>
 </html>
